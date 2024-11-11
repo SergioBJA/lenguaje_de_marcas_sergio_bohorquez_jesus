@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <persona>
+        <nombre>Laura </nombre>
+        <apellidos>Martínez López</apellidos>
+        <direccion>
+            <calle>Calle Mayor, 123</calle>
+            <ciudad>Madrid</ciudad>
+            <codigoPostal>28001</codigoPostal>
+        </direccion>
+        <telefonos>
+            <telefono tipo="casa">912345678</telefono>
+            <telefono tipo="movil">612345678</telefono>
+            <telefono tipo="trabajo">912345679</telefono>
+        </telefonos>
+    </persona>
+    
+    <persona>
+        <nombre>David</nombre>
+        <apellidos>Sánchez Pérez</apellidos>
+        <direccion>
+            <calle>Avenida de América, 45</calle>
+            <ciudad>Barcelona</ciudad>
+            <codigoPostal>08001</codigoPostal>
+        </direccion>
+        <telefonos>
+            <telefono tipo="casa">932345678</telefono>
+            <telefono tipo="movil">622345678</telefono>
+			<telefono tipo="trabajo">912435871</telefono>
+        </telefonos>
+    </persona>
+</agenda>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-stylesheet type="text/css" href="styles.css"?>
+   <catalog>
+       <book>
+           <title>Clean Code</title>
+           <author>Robert C. Martin</author>
+           <year>2008</year>
+           <publisher>Prentice Hall</publisher>
+       </book>
+       <book>
+           <title>El principito</title>
+           <author>Antoine de Saint-Exupéry</author>
+           <year>1943</year>
+           <publisher>Gran Travesía</publisher>
+       </book>
+	   <book>
+           <title>Harry Potter y la piedra filosofal</title>
+           <author>J.K. Rowling</author>
+           <year>1997</year>
+           <publisher>Scholastic</publisher>
+       </book>
+	   <book>
+           <title>Don Quijote</title>
+           <author>Miguel de Cervantes</author>
+           <year>1605</year>
+           <publisher>Francisco de Robles</publisher>
+       </book>
+   </catalog>
