@@ -3,23 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>botones</title>
+    <title>Botones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: #2c5282;
+            text-align: center;
+            font-size: 1.8em;
+            margin: 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        p {
+            text-align: center;
+            margin: 25px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Estilo personalizado para los radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e2e8f0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #4299e1;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        input[type="radio"] + label:hover {
+            background-color: #bee3f8;
+        }
+
+        /* Estilos específicos para cada categoría */
+        .musica-section label {
+            border: 2px solid #4299e1;
+        }
+
+        .cine-section label {
+            border: 2px solid #48bb78;
+        }
+
+        .cine-section input[type="radio"]:checked + label {
+            background-color: #48bb78;
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            p {
+                gap: 10px;
+            }
+
+            input[type="radio"] + label {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h3 align="center">selecciona tipo de musica</h3>
     <form action="">
-        <p align="center">
-            <input type="radio" name="musica" value="jazz">Jazz
-            <input type="radio" name="musica" value="pop">Pop
-            <input type="radio" name="musica" value="rock">Rock
-            <input type="radio" name="musica" value="country">Country
+        <h3>Selecciona tipo de música</h3>
+        <p class="musica-section">
+            <input type="radio" name="musica" value="jazz" id="jazz">
+            <label for="jazz">Jazz</label>
+            <input type="radio" name="musica" value="pop" id="pop">
+            <label for="pop">Pop</label>
+            <input type="radio" name="musica" value="rock" id="rock">
+            <label for="rock">Rock</label>
+            <input type="radio" name="musica" value="country" id="country">
+            <label for="country">Country</label>
         </p>
-        <h3 align="center">Selecciona tipo de cine</h3>
-        <p align="center">
-            <input type="radio" name="cine" value="acción">Acción
-            <input type="radio" name="cine" value="comedia">Comedia
-            <input type="radio" name="cine" value="ciencia-ficcion">Ciencia-ficcion
-            <input type="radio" name="cine" value="drama">Drama
+
+        <h3>Selecciona tipo de cine</h3>
+        <p class="cine-section">
+            <input type="radio" name="cine" value="accion" id="accion">
+            <label for="accion">Acción</label>
+            <input type="radio" name="cine" value="comedia" id="comedia">
+            <label for="comedia">Comedia</label>
+            <input type="radio" name="cine" value="ciencia-ficcion" id="ciencia-ficcion">
+            <label for="ciencia-ficcion">Ciencia-ficción</label>
+            <input type="radio" name="cine" value="drama" id="drama">
+            <label for="drama">Drama</label>
         </p>
     </form>
 </body>

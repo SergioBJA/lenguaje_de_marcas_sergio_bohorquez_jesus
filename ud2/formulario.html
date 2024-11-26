@@ -3,22 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: capitalize;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-label {
+            min-width: 120px;
+            color: #4a5568;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .form-label::after {
+            content: "....";
+            position: absolute;
+            color: #cbd5e0;
+            margin-left: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            flex: 1;
+            padding: 10px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+            background-color: white;
+        }
+
+        input[type="password"] {
+            letter-spacing: 0.2em;
+        }
+
+        /* Efecto hover en los inputs */
+        input:hover {
+            border-color: #90cdf4;
+        }
+
+        /* Estilos para valores predeterminados */
+        input[value="0"],
+        input[value="jere de l fra"] {
+            color: #718096;
+            font-style: italic;
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .form-label {
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1 aling="center"> formularios </h1>
-    <table align="center" border="2" cellpadding="20">
-    <tr><td bgcolor="aqua">
-    <form action="">
-        <p>
-            Nombre......<input type="text" name="nombre" size="25" maxlength="40"><br>
-            Dirección...<input type="text" name="direcc" size="20" maxlength="30"><br>
-            Teléfono....<input type="text" name="tlf" size="10" maxlength="10" value="0"><br>
-            Edad........<input type="text" name="edad" size="3" maxlength="3" value="0"><br>
-            Población...<input type="text" name="pobl" size="20" maxlength="30" value="jere de l fra"><br>
-            Clave.......<input type="password" name="clave" size="10" maxlength="20"><br>
-        </p>
-    </form>
-    </td></tr></table>
+    <h1>Formulario</h1>
+    <div class="form-container">
+        <form action="">
+            <div class="form-group">
+                <label class="form-label">Nombre</label>
+                <input type="text" name="nombre" maxlength="40">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Dirección</label>
+                <input type="text" name="direcc" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Teléfono</label>
+                <input type="text" name="tlf" maxlength="10" value="0">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Edad</label>
+                <input type="text" name="edad" maxlength="3" value="0">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Población</label>
+                <input type="text" name="pobl" maxlength="30" value="jere de l fra">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Clave</label>
+                <input type="password" name="clave" maxlength="20">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
