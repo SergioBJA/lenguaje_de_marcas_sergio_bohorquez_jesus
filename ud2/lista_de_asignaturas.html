@@ -3,7 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de asignaturas</title>
+    <title>Lista de asignaturas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+        }
+
+        /* Estilo para la lista principal */
+        li {
+            list-style-type: none;
+            padding: 8px 15px;
+            margin: 5px 0;
+            background-color: #e3e8ef;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+            background-color: #d1d9e6;
+        }
+
+        /* Estilo para la lista de definiciones */
+        dl {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #2c5282;
+            padding: 10px 0 5px 0;
+            border-bottom: 2px solid #4299e1;
+            margin-top: 15px;
+        }
+
+        dd {
+            margin-left: 20px;
+            color: #4a5568;
+            padding: 5px 0;
+        }
+
+        /* Efecto hover para las definiciones */
+        dt:hover + dd {
+            background-color: #f7fafc;
+            padding-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Añadir un título a la página */
+        body::before {
+            content: "Asignaturas 1º DAW";
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            color: #2d3748;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4299e1;
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            dl {
+                padding: 10px;
+            }
+            
+            dd {
+                margin-left: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <dl>

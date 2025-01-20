@@ -1,15 +1,106 @@
-<h1>Sergio Bohorquez</h1>
-<h2>Lenguaje de Marcas 1 DAW</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Sergio Bohorquez</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
 
-<h3>Tema1: Introducción al lenguaje de marcas</h3>
-<p>Ejercicio1:<a href="./ud1/T1 EJ2 XML/fechas/fechas.xml">fechas </a></p>
-<p>Ejercicio2:<a href="./ud1/T1 EJ2 XML/articulos/articulos.xml">articulos </a></p>
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
 
-<h3>Tema2: HTML</h3>
-<p>Ejercicio1:<a href="./ud2/lista_de_asignaturas.html"> lista_de_asignaturas</a></p>
-<p>Ejercicio2:<a href="./ud2/horario_clase.html">horario_clase</a></p>
+        h2 {
+            color: #34495e;
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
 
-wikipedia
-<iframe width="300" height="250" src="https://es.wikipedia.org/wiki/Wikipedia:Portada" frameborder="1" scrolling="yes" id="framel"></iframe>
-dino
-<iframe width="900" height="350" src="https://dinorunner.com/es/" frameborder="1" scrolling="yes" id="framel"></iframe>
+        h3 {
+            color: #16a085;
+            font-size: 1.5em;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #e8f6f3;
+            border-radius: 5px;
+        }
+
+        p {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateX(10px);
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Contenedor para los iframes */
+        .iframe-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .iframe-container iframe {
+            margin: 20px 0;
+        }
+
+        /* Título para los iframes */
+        .iframe-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sergio Bohorquez</h1>
+    <h2>Lenguaje de Marcas 1 DAW</h2>
+
+    <h3>Tema1: Introducción al lenguaje de marcas</h3>
+    <p>Ejercicio1: <a href="./ud1/T1 EJ2 XML/fechas/fechas.xml">fechas</a></p>
+    <p>Ejercicio2: <a href="./ud1/T1 EJ2 XML/articulos/articulos.xml">articulos</a></p>
+
+    <h3>Tema2: HTML</h3>
+    <p>Ejercicio1: <a href="./ud2/lista_de_asignaturas.html">lista_de_asignaturas</a></p>
+    <p>Ejercicio2: <a href="./ud2/horario_clase.html">horario_clase</a></p>
+
+    <div class="iframe-container">
+        <div class="iframe-title">Wikipedia</div>
+        <iframe width="300" height="250" src="https://es.wikipedia.org/wiki/Wikipedia:Portada" frameborder="0" scrolling="yes" id="framel"></iframe>
+        
+        <div class="iframe-title">Dino Runner</div>
+        <iframe width="900" height="350" src="https://dinorunner.com/es/" frameborder="0" scrolling="yes" id="framel"></iframe>
+    </div>
+</body>
+</html>

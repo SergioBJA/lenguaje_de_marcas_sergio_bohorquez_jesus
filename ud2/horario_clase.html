@@ -3,54 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>horario clase</title>
+    <title>Horario Clase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        td:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* Colores para las asignaturas */
+        .ENDES { background-color: #2fdee4; }
+        .ING { background-color: #f1e645; }
+        .LMSGI { background-color: #5b5df1; color: white; }
+        .STINF { background-color: #f15b63; color: white; }
+        .SAS { background-color: #6be752; }
+        .PROGR { background-color: #c972f1; color: white; }
+        .DAS { background-color: #6e9233; color: white; }
+        .IPE { background-color: #ce630c; color: white; }
+        .BADAT { background-color: #ec9853; }
+        .RECREO {
+            background-color: #0fbe1d;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px 5px;
+            }
+
+            td:hover {
+                transform: none;
+            }
+        }
+
+        /* Animación al cargar la página */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        table {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
 </head>
 <body>
-    <table border="1" align="center">
-        <tr align="center" style="background-color: rgb(82, 209, 23);">
-            <th>lunes</th>
-            <th>martes</th>
-            <th>miercoles</th>
-            <th>jueves</th>
-            <th>viernes</th>
+    <table>
+        <tr>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
         </tr>
-        <tr align="center">
-            <td style="background-color: rgb(47, 222, 228);">ENDES</td>
-            <td style="background-color: rgb(241, 230, 69);">ING</td>
-            <td style="background-color: rgb(91, 93, 241);">LMSGI</td>
-            <td style="background-color: rgb(241, 91, 99);">STINF</td>
-            <td style="background-color: rgb(107, 231, 82);">SAS</td>
-        <tr align="center">
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-            <td style="background-color: rgb(110, 146, 51);">DAS</td>
-            <td style="background-color: rgb(47, 222, 228);">ENDES</td>
-            <td style="background-color: rgb(47, 222, 228);">ENDES</td>
-            <td style="background-color: rgb(206, 99, 12);">IPE</td>
-        <tr align="center">
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-            <td style="background-color: rgb(206, 99, 12);">IPE</td>
-            <td style="background-color: rgb(241, 91, 99);">STRINF</td>
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-        <tr align="center">
-            <td colspan="5" align="center" style="background-color: rgb(15, 190, 29); font-weight: bold;">RECREO</td>
-        <tr align="center">
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(241, 91, 99);">STRINF</td>
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-            <td style="background-color: rgb(201, 114, 241);">PROGR</td>
-        <tr align="center">
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(206, 99, 12);">IPE</td>
-            <td style="background-color: rgb(241, 91, 99);">STRINF</td>
-        <tr align="center">
-            <td style="background-color: rgb(241, 230, 69);">ING</td>
-            <td style="background-color: rgb(91, 93, 241);">LMSGI</td>
-            <td style="background-color: rgb(236, 152, 83);">BADAT</td>
-            <td style="background-color: rgb(91, 93, 241);">LMSGI</td>
-            <td style="background-color: rgb(241, 91, 99);">STRINF</td>
+        <tr>
+            <td class="ENDES">ENDES</td>
+            <td class="ING">ING</td>
+            <td class="LMSGI">LMSGI</td>
+            <td class="STINF">STINF</td>
+            <td class="SAS">SAS</td>
+        </tr>
+        <tr>
+            <td class="PROGR">PROGR</td>
+            <td class="DAS">DAS</td>
+            <td class="ENDES">ENDES</td>
+            <td class="ENDES">ENDES</td>
+            <td class="IPE">IPE</td>
+        </tr>
+        <tr>
+            <td class="PROGR">PROGR</td>
+            <td class="IPE">IPE</td>
+            <td class="STINF">STINF</td>
+            <td class="PROGR">PROGR</td>
+            <td class="PROGR">PROGR</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="RECREO">RECREO</td>
+        </tr>
+        <tr>
+            <td class="BADAT">BADAT</td>
+            <td class="BADAT">BADAT</td>
+            <td class="STINF">STINF</td>
+            <td class="PROGR">PROGR</td>
+            <td class="PROGR">PROGR</td>
+        </tr>
+        <tr>
+            <td class="BADAT">BADAT</td>
+            <td class="BADAT">BADAT</td>
+            <td class="BADAT">BADAT</td>
+            <td class="IPE">IPE</td>
+            <td class="STINF">STINF</td>
+        </tr>
+        <tr>
+            <td class="ING">ING</td>
+            <td class="LMSGI">LMSGI</td>
+            <td class="BADAT">BADAT</td>
+            <td class="LMSGI">LMSGI</td>
+            <td class="STINF">STINF</td>
+        </tr>
+    </table>
 </body>
 </html>

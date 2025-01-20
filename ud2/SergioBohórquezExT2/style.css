@@ -1,0 +1,226 @@
+/* Reset de márgenes y paddings */
+ul, ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+
+.clear {
+    clear: both;
+    
+}
+
+img {
+    border: none;
+}
+
+
+/* Contenedor principal */
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    width: expression(document.body.clientWidth > 901 ? "900px" : "auto");
+    margin: 0 auto;
+}
+
+/* Secciones principales */
+#menu{
+    background-color: #036;
+}
+#menu #menu_principal a{
+    color: white;
+    margin-right: 1em;
+    text-size-adjust: 1.3em;
+}
+#cabecera #logo{
+    color: rgb(241, 175, 109);
+}
+
+#publicidad{
+    background-color: rgb(245, 206, 166);
+}
+#noticias{
+    background-color: #e9e9e9;
+}
+
+
+#publicidad .titulo{
+    color: #c60;
+}
+.articulo{
+    margin-inline: 1.2em;
+    margin-bottom: 0.3em;
+}
+
+.articulo p{
+    margin-top: 0.3em;
+}
+
+.articulo .titulo1{
+    color: #c60;
+}
+
+.articulo .titulo2{
+    color: #c60;
+}
+
+#lateral{
+    text-align: 0.9em;
+    border: 2px solid #777;
+
+}
+
+#noticias .fecha{
+    color: #999;
+}
+
+#publicidad p{
+   color: #555;
+}
+
+#contenido, #contenido, #principal, #contenido{
+    border: 2px solid #777;
+}
+
+#secundario{
+    border: 2px solid #c60;
+}
+
+#secundario .titulo3{
+    color: #ffffff;
+    background-color: #c60;
+}
+
+#secundario .titulo4{
+    color: #ffffff;
+    background-color: #c60;
+}
+
+#cabecera {
+    clear: both;
+}
+
+#menu {
+    clear: both;
+}
+
+/* Lateral y contenido */
+#lateral {
+    float: left;
+    width: 20%;
+}
+
+#contenido {
+    float: right;
+    width: 78%;
+}
+
+/* Subdivisiones del contenido */
+#contenido #principal {
+    float: left;
+    width: 78%;
+}
+
+#contenido #secundario {
+    float: right;
+    width: 20%;
+}
+
+/* Pie de página */
+#pie {
+    clear: both;
+    border: 2px solid #a7a7a7;
+    background-color: #ebebeb;
+
+}
+
+/* Elementos específicos */
+#cabecera #logo {
+    float: left;
+}
+
+#cabecera #buscador {
+    float: right;
+}
+
+#menu ul#menu_principal li {
+    display: inline;
+    float: left;
+    color: white;
+}
+
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left;
+}
+
+#pie .enlaces {
+    float: left;
+}
+
+#pie .copyright {
+    float: right;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table styles */
+.table {
+    width: 80%;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    border: 2px solid #777;
+}
+
+.table thead {
+    color: #160c0c;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 2px solid #777;
+    
+}
+
+.table thead th {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #777;
+}
+
+/* Row styles */
+.table tbody tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+    border: 2px solid #777;
+}
+
+.table tbody tr:hover {
+    background-color: #ffffff;
+    border: 2px solid #777;
+}
+
+/* Cell styles */
+.table tbody td {
+    padding: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    border: 2px solid #777;
+}
+
+/* Last row border removal */
+.table tbody tr:last-of-type {
+    border-bottom: none;
+    border: 2px solid #777;
+}
