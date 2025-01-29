@@ -11,31 +11,33 @@
     height: 65px;
     align-items: center;   
     z-index: 1000; 
+
   }
   
 .logo img {
-  height: 100px; /* Ajusta la altura del logo */
+  background-color: #f1e0c6;
+  height: 81px; /* Ajusta la altura del logo */
     display: block;
     float: left;
 }
 
-  .navegacion{
-    background-color: #f1e0c6;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            font-weight: bold;
-          
-  }
+.navegacion {
+  background-color: #f1e0c6;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; /* Mueve el menú a la derecha */
+  align-items: center; /* Centra verticalmente */
+  position: relative;
+  font-weight: bold;
+}
 
-  .navegacion ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-
+.navegacion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Asegura alineación vertical */
+}
   .navegacion ul li a {
     text-decoration:none; 
     color: #6d4c41;
@@ -66,7 +68,7 @@
   
   /* Submenu*/
   
-  .submenu {
+  /*.submenu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -77,7 +79,7 @@
     padding: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px); /* Inicia más arriba */
+    transform: translateY(-10px); /* Inicia más arriba 
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
   
@@ -88,13 +90,13 @@
     text-decoration: none;
     font-size: 16px;
     white-space: nowrap;
-}
+}*/
   
-.menu > li:hover .submenu {
+/*.menu > li:hover .submenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0); 
-}
+}*/
   
   html *{
    margin: 0; 
@@ -154,23 +156,51 @@
   
   /** Hero Section **/
   
-  .hero-section{
-    height: 90vh;
-    background: url(img/img-hero-agencia.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #b4cf8d;
-    background-blend-mode: multiply;
-    display: flex;
-    align-items: center;
-  }
-  
-  .wrap-hero-section{
-    max-width: 600px;
-    color: #fff;
-    padding: 15%;
-  }
+.hero-section {
+  height: 90vh; /* Aseguramos que ocupa el 90% de la altura de la pantalla */
+  background: url('img/portada.jpg') center/cover no-repeat; /* Imagen de fondo */
+  background-color: #7caa3bae;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#info-contacto{
+  color: #070505;
+  text-align: center;
+}
+
+.wrap-hero-section {
+  max-width: 600px;
+  color: #fff;
+  padding: 15%;
+}
+
+.h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.cta-a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: var(--main-c);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-r);
+  transition: background-color 0.3s ease;
+}
+
+.cta-a:hover {
+  background-color: #a67b5b;
+}
   
   /** Logo Brand Section **/
   .secetion{
@@ -200,6 +230,7 @@
     display: flex;
     justify-content: center;
     margin: 3rem 1rem;
+    text-align: center;
   }
   
   /** Servicios Section **/
@@ -212,6 +243,8 @@
   
   .item-servicios-section{
     padding: 1rem;
+    text-align: center;
+
   }
   
   .item-servicios-section img{
@@ -244,6 +277,41 @@
     padding-bottom: 1rem;
   }
   
+  .info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-box {
+    background-color: #d4eeac; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    width: 300px; /* Ancho fijo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgb(189, 215, 160);
+}
+
+.info-box h3 {
+    color: #6d4c41;
+    font-size: 20px;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
   /** Form Section **/
   
   section.two-column-section.form{
@@ -271,35 +339,218 @@
   
   /** Footer **/
   
-  .footer-section{
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Hace que la imagen de fondo cubra todo el ancho */
+  height: 330px;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+.footer-logo {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+
+}
+.footer-logo img {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin estirarse */
+  display: block; /* Asegura que se comporte como un bloque */
+  margin: 0 auto; /* Centra la imagen */
+}
+
+
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: #f1e0c6;
+  padding: 20px 0;
+  text-align: center;
+  color: #6d4c41;
+  font-size: 14px;
+}
+
+.footer-social .x{
+    
+}
+
+.footer-social .ig{
   
-  .menu-footer-section{
-    padding: 1rem 0;
-  }
-  
-  .wrap-social-logos ul, .wrap-menu-footer-section ul{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-logo{
-    max-width: 75px;
-    width: 100%;
-    padding: 1rem;
-  }
-  
-  .wrap-menu-footer-section ul li{
-    font-size: 1.1rem;
-    padding: 1.5rem;
-  }
-  
-  .footer-creds{
-    color: #674ea7;
-    font-family: Merriweather, Arial;
-    font-size: 9.0pt;
-    font-weight: 700;
-    vertical-align: baseline;
-  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #6d4c41;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #a67b5b;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Formulario de Contacto */
+section.two-column-section.form {
+  background-color: #ffffffdf;
+  padding: 2rem 0;  /* Reducido el padding para hacerlo más compacto */
+}
+
+.wrap-form {
+  max-width: 500px;  /* Tamaño más pequeño para el formulario */
+  margin: 0 auto;
+  padding: 1.5rem;  /* Menos padding */
+  background-color: #e8d2bc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  /* Menos espacio entre los campos */
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-item label {
+  font-size: 1rem;  /* Un tamaño de fuente más pequeño */
+  color: #333;
+}
+
+.form-item input,
+.form-item textarea {
+  padding: 0.8rem;  /* Reducido el padding */
+  font-size: 0.9rem;  /* Tamaño de fuente más pequeño */
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  width: 100%;  /* Aseguramos que los cuadros llenen el 100% del contenedor */
+  box-sizing: border-box;  /* Para incluir el padding en el ancho total */
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+  border-color: var(--main-c);
+  outline: none;
+}
+
+.form-item textarea {
+  min-height: 140px;  /* Ajustamos la altura del textarea para que se vea más proporcionado */
+  resize: none;
+}
+
+.btn-enviar {
+  padding: 0.8rem 1.5rem;  /* Botón más pequeño */
+  background-color: var(--main-c);
+  color: #0c0c0c;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: darken(var(--main-c), 10%);
+}
