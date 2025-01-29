@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e8f4f8;
+        }
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            border-radius: 10px;
+        }
+        .lateral {
+            border-right: 3px solid #3498db;
+            padding-right: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .foto {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+        .contacto-info {
+            line-height: 1.6;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contacto-info p {
+            margin: 5px 0;
+            color: #2c3e50;
+        }
+        .contenido-principal {
+            padding-left: 20px;
+        }
+        .nombre {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .profesion {
+            font-style: italic;
+            color: #3498db;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .seccion {
+            margin: 25px 0;
+        }
+        .seccion-titulo {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .experiencia-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .fecha {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .empresa {
+            font-weight: bold;
+            margin: 5px 0;
+            color: #2c3e50;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+            color: #2c3e50;
+        }
+        .habilidad {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 20px;
+            transition: transform 0.2s;
+        }
+        .habilidad:hover {
+            transform: translateX(10px);
+            background-color: #2980b9;
+        }
+        .idioma {
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 20px;
+            transition: transform 0.2s;
+        }
+        .idioma:hover {
+            transform: translateX(10px);
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="lateral">
+            <img src="ruta-de-tu-foto.jpg" alt="Foto de perfil" class="foto">
+            
+            <div class="contacto-info">
+                <h2 class="seccion-titulo">Contacto</h2>
+                <p>📧 sergiobohorquezj@gmail.com</p>
+                <p>📱 (+34) 663 50 93 07</p>
+                <p>📍 Calle oslo 14</p>
+                <p>Jerez de  la Frontera, España</p>
+            </div>
+
+            <div class="seccion">
+                <h2 class="seccion-titulo">Idiomas</h2>
+                <div class="idioma">Español: Nativo</div>
+                <div class="idioma">Inglés: Nivel B1</div>
+                <div class="idioma">Francés: Nivel A2</div>
+            </div>
+
+            <div class="seccion">
+                <h2 class="seccion-titulo">Habilidades</h2>
+                <div class="habilidad">XML</div>
+                <div class="habilidad">HTML</div>
+                <div class="habilidad">CSS</div>
+                <div class="habilidad">Java</div>
+            </div>
+        </div>
+
+        <div class="contenido-principal">
+            <header>
+                <h1 class="nombre">Sergio Bohórquez Jesús</h1>
+                <p class="profesion">Programador</p>
+            </header>
+
+            <div class="seccion">
+                <h2 class="seccion-titulo">Perfil Profesional</h2>
+                <p>Desarrollador web con experiencia en XML, Java, HTML y CSS</p>
+            </div>
+
+            <div class="seccion">
+                <h2 class="seccion-titulo">Experiencia Profesional</h2>
+                <div class="experiencia-item">
+                    <p class="fecha">2024 - 2024</p>
+                    <p class="empresa">Mozo de equipajes</p>
+                    <ul>
+                        <li>Mozo de equipajes durante el verano de 2024 en el hotel Barcelo Montecastillo</li>
+                    </ul>
+                </div>
+                <div class="experiencia-item">
+                    <p class="fecha">2024 - 2024</p>
+                    <p class="empresa">Parcticas de CFGM</p>
+                    <ul>
+                        <li>Paracticas del CFGM en Colegio Pio XII</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="seccion">
+                <h2 class="seccion-titulo">Formación Académica</h2>
+                <div class="experiencia-item">
+                    <p class="fecha">2024</p>
+                    <p class="empresa">Grado Medio en Sistemas Microinformaticos y Redes</p>
+                    <p>Colegio La salle Sagrado Corazón de jesús</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
