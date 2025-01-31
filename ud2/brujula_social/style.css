@@ -384,20 +384,17 @@
 }
 .footer-logo {
   display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0; /* Espaciado superior e inferior */
 }
+
 .footer-logo img {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  max-width: 400px; /* Aumenta el tamaño máximo de la imagen */
-  height: auto; /* Mantiene la proporción original */
-  object-fit: contain; /* Asegura que la imagen se ajuste sin estirarse */
-  display: block; /* Asegura que se comporte como un bloque */
-  margin: 0 auto; /* Centra la imagen */
+  width: 200px; /* Aumenta el tamaño del logo */
+  max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+  height: auto; /* Mantiene la proporción correcta */
 }
-
 
 .footer-text p {
   margin-bottom: 14px;
@@ -434,13 +431,6 @@
   font-size: 14px;
 }
 
-.footer-social .x{
-    
-}
-
-.footer-social .ig{
-  
-}
 
 .footer-container {
   display: flex;
@@ -477,9 +467,19 @@
   gap: 10px;
 }
 
+.footer-social a {
+  display: inline-block; /* Para que el enlace mantenga su tamaño */
+  width: 60px; /* Ajusta el tamaño según necesites */
+  height: 60px;
+}
+
 .footer-social img {
-  width: 24px;
-  height: 24px;
+  width: 100%; /* Hace que la imagen ocupe todo el espacio del contenedor */
+  height: 100%;
+  object-fit: contain; /* Evita que la imagen se recorte */
+  border-radius: 10px; /* Opcional, si quieres bordes redondeados */
+  background-color: rgba(255, 255, 255, 0); /* Fondo opcional si las imágenes son transparentes */
+  padding: 5px; /* Espacio alrededor de la imagen */
 }
 
 .footer-copy {
@@ -497,9 +497,10 @@ section.two-column-section.form {
   max-width: 500px;  /* Tamaño más pequeño para el formulario */
   margin: 0 auto;
   padding: 1.5rem;  /* Menos padding */
-  background-color: #e8d2bc;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #d4eeac;
+  border-radius: 5px;
+  object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
