@@ -1,0 +1,248 @@
+:root{
+  --main-c:#7aad3e; 
+  --border-r:.2rem;
+}
+
+/*---Estilos Generales---*/
+
+body {
+  background-color: #d4eeac;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  align-items: center;   
+  z-index: 1000; 
+
+}
+
+.logo img {
+background-color: #f1e0c6;
+height: 81px; /* Ajusta la altura del logo */
+  display: block;
+  float: left;
+}
+
+.navegacion {
+background-color: #f1e0c6;
+padding: 15px;
+display: flex;
+justify-content: flex-end; /* Mueve el menú a la derecha */
+align-items: center; /* Centra verticalmente */
+position: relative;
+font-weight: bold;
+}
+
+.navegacion ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center; /* Asegura alineación vertical */
+}
+.navegacion ul li a {
+  text-decoration:none; 
+  color: #6d4c41;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navegacion ul li a:hover {
+color: #a67b5b;
+}
+.menu > li{
+  position: relative;
+  display: inline-block;
+}
+  
+.menu > li > a{
+  display: block;
+  padding: 15px 20px;
+  color: #353535;
+  font-family: 'Open sans';
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  color: #CE7D35;
+  transition: all .3s;
+}
+
+/*---valores del texto---*/
+
+.valores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px; /* Espaciado para que no quede pegado al borde */
+  font-family: 'Open Sans', sans-serif;
+  color: #353535; /* Color de texto que ya usas en los enlaces */
+  line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+}
+
+.valores h1 {
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  margin-bottom: 20px;
+  color: #6d4c41; /* Un tono marrón que ya usas en el menú */
+}
+
+.valores p {
+  font-size: 1.2rem; /* Tamaño legible para el cuerpo de texto */
+  max-width: 800px; /* Limita el ancho para que no se vea muy extendido */
+  margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+/*---footer---*/
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.single-cta i {
+color: #ff5e14;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+ position: absolute;
+top: 0;
+left: 0;
+width: 100%; /* Hace que la imagen de fondo cubra todo el ancho */
+height: 330px;
+object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+.footer-logo {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+.footer-logo img {
+width: 200px; /* Aumenta el tamaño del logo */
+max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+height: auto; /* Mantiene la proporción correcta */
+}
+
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+
+.footer {
+background-color: #f1e0c6;
+padding: 20px 0;
+text-align: center;
+color: #6d4c41;
+font-size: 14px;
+}
+
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 10px;
+flex-wrap: wrap;
+}
+
+.footer-logo img {
+height: 50px;
+}
+
+.footer-links {
+display: flex;
+gap: 15px;
+}
+
+.footer-links a {
+text-decoration: none;
+color: #6d4c41;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: #a67b5b;
+}
+
+.footer-social {
+display: flex;
+gap: 10px;
+}
+
+.footer-social a {
+display: inline-block; /* Para que el enlace mantenga su tamaño */
+width: 60px; /* Ajusta el tamaño según necesites */
+height: 60px;
+}
+
+.footer-social img {
+width: 100%; /* Hace que la imagen ocupe todo el espacio del contenedor */
+height: 100%;
+object-fit: contain; /* Evita que la imagen se recorte */
+border-radius: 10px; /* Opcional, si quieres bordes redondeados */
+background-color: rgba(255, 255, 255, 0); /* Fondo opcional si las imágenes son transparentes */
+padding: 5px; /* Espacio alrededor de la imagen */
+}
+
+.footer-copy {
+margin-top: 15px;
+font-size: 12px;
+}
+

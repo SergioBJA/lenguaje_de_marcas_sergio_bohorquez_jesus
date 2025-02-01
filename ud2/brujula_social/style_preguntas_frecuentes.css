@@ -1,0 +1,67 @@
+:root{
+    --main-c:#7aad3e; 
+    --border-r:.2rem;
+  }
+  
+  /** Estilos Generales **/
+  
+  header {
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    align-items: center;   
+    z-index: 1000; 
+
+  }
+  
+.logo img {
+  background-color: #f1e0c6;
+  height: 81px; /* Ajusta la altura del logo */
+    display: block;
+    float: left;
+}
+
+.navegacion {
+  background-color: #f1e0c6;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; /* Mueve el menú a la derecha */
+  align-items: center; /* Centra verticalmente */
+  position: relative;
+  font-weight: bold;
+}
+
+.navegacion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Asegura alineación vertical */
+}
+  .navegacion ul li a {
+    text-decoration:none; 
+    color: #6d4c41;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navegacion ul li a:hover {
+  color: #a67b5b;
+}
+  .menu > li{
+    position: relative;
+    display: inline-block;
+  }
+    
+  .menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #353535;
+    font-family: 'Open sans';
+    text-decoration: none;
+  }
+  
+  .menu li a:hover{
+    color: #CE7D35;
+    transition: all .3s;
+  }
