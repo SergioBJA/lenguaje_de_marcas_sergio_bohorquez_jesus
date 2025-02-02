@@ -1,61 +1,6 @@
-:root {
+:root{
   --main-c: #7aad3e; 
-  --secondary-c: #f1e0c6;
-  --text-c: #6d4c41;
-  --hover-c: #a67b5b;
-  --border-r: 1.5rem;
-}
-
-body {
-  background-color: #d4eeac;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* Estilos del encabezado */
-header {
-  position: fixed;
-  width: 100%;
-  height: 65px;
-  background-color: var(--secondary-c);
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-}
-
-.logo img {
-  background-color: var(--secondary-c);
-  height: 81px;
-  display: block;
-  margin-left: 10px;
-}
-
-.navegacion {
-  margin-left: auto;
-  padding: 15px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-weight: bold;
-}
-
-.navegacion ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navegacion ul li a {
-  text-decoration: none;
-  color: var(--text-c);
-  font-size: 18px;
-  transition: color 0.3s;
-  padding: 0 15px;
-}
-
-.navegacion ul li a:hover {
-  color: var(--hover-c);
+  --border-r:.2rem;
 }
 
 /* Estilo de la sección del equipo */
@@ -64,6 +9,7 @@ header {
   background-color: #d4eeac;
   text-align: center;
   color: var(--text-c);
+  margin-bottom: 100px; /* Espacio entre el equipo y el footer */
 }
 
 .equipo-container h1 {
@@ -119,3 +65,4 @@ header {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+

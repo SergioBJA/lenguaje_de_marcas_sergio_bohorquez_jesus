@@ -1,67 +1,40 @@
-:root{
-    --main-c:#7aad3e; 
-    --border-r:.2rem;
-  }
-  
-  /** Estilos Generales **/
-  
-  header {
-    position: fixed;
-    width: 100%;
-    height: 65px;
-    align-items: center;   
-    z-index: 1000; 
-
-  }
-  
-.logo img {
-  background-color: #f1e0c6;
-  height: 81px; /* Ajusta la altura del logo */
-    display: block;
-    float: left;
-}
-
-.navegacion {
-  background-color: #f1e0c6;
-  padding: 15px;
+.valores {
   display: flex;
-  justify-content: flex-end; /* Mueve el menú a la derecha */
-  align-items: center; /* Centra verticalmente */
-  position: relative;
-  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px; /* Espaciado para que no quede pegado al borde */
+  font-family: 'Open Sans', sans-serif;
+  color: #353535; /* Color de texto que ya usas en los enlaces */
+  line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
 }
 
-.navegacion ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center; /* Asegura alineación vertical */
-}
-  .navegacion ul li a {
-    text-decoration:none; 
-    color: #6d4c41;
-    font-size: 18px;
-    transition: color 0.3s;
+.main-content-wrapper {
+  background-color: #f1e0c6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
 }
 
-.navegacion ul li a:hover {
-  color: #a67b5b;
+.main-content-box {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #353535;
+  line-height: 1.6;
 }
-  .menu > li{
-    position: relative;
-    display: inline-block;
-  }
-    
-  .menu > li > a{
-    display: block;
-    padding: 15px 20px;
-    color: #353535;
-    font-family: 'Open sans';
-    text-decoration: none;
-  }
-  
-  .menu li a:hover{
-    color: #CE7D35;
-    transition: all .3s;
-  }
+
+.main-content-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6d4c41;
+}
+
+.main-content-box p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+

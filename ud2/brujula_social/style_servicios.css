@@ -1,67 +1,165 @@
-:root{
-    --main-c:#7aad3e; 
-    --border-r:.2rem;
-  }
-  
-  /** Estilos Generales **/
-  
-  header {
-    position: fixed;
-    width: 100%;
-    height: 65px;
-    align-items: center;   
-    z-index: 1000; 
-
-  }
-  
-.logo img {
-  background-color: #f1e0c6;
-  height: 81px; /* Ajusta la altura del logo */
-    display: block;
-    float: left;
+:root {
+  --main-green: #7aad3e;
+  --soft-beige: #f5f5dc;
+  --white: #ffffff;
+  --text-dark: #353535;
+  --border-radius: 1rem;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
 }
 
-.navegacion {
-  background-color: #f1e0c6;
-  padding: 15px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--soft-beige);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--main-green);
+  padding: 20px;
   display: flex;
-  justify-content: flex-end; /* Mueve el menú a la derecha */
-  align-items: center; /* Centra verticalmente */
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.logo img {
+  height: 60px;
+}
+
+.navegacion .menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navegacion .menu li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.navegacion .menu li a:hover {
+  color: var(--soft-beige);
+}
+
+.servicios-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.wrap-title-section h2 {
+  font-size: 2.5em;
+  color: var(--main-green);
+  margin-bottom: 50px;
   font-weight: bold;
 }
 
-.navegacion ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center; /* Asegura alineación vertical */
-}
-  .navegacion ul li a {
-    text-decoration:none; 
-    color: #6d4c41;
-    font-size: 18px;
-    transition: color 0.3s;
+.wrap-servicios-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
 }
 
-.navegacion ul li a:hover {
-  color: #a67b5b;
+.wrap-servicios-section a {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
 }
-  .menu > li{
-    position: relative;
-    display: inline-block;
-  }
-    
-  .menu > li > a{
-    display: block;
-    padding: 15px 20px;
-    color: #353535;
-    font-family: 'Open sans';
-    text-decoration: none;
-  }
-  
-  .menu li a:hover{
-    color: #CE7D35;
-    transition: all .3s;
-  }
+
+.wrap-servicios-section a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wrap-servicios-section img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.wrap-servicios-section h2 {
+  font-size: 1.3em;
+  color: var(--main-green);
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.wrap-servicios-section .content {
+  padding: 20px;
+  background-color: var(--soft-beige);
+  color: var(--text-dark);
+  border-radius: var(--border-radius);
+  margin-top: 10px;
+  font-size: 1.1em;
+  height: 100%;
+}
+
+/* Checkbox oculto */
+.accordion-label {
+  display: block;
+  background-color: var(--soft-beige);
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+  border-radius: var(--border-radius);
+}
+
+.accordion-label:hover {
+  background-color: var(--main-green);
+  color: var(--white);
+}
+
+.accordion-input {
+  display: none;
+}
+
+.accordion-input:checked + .accordion-label {
+  background-color: var(--main-green);
+  color: var(--white);
+}
+
+.accordion-input:checked + .accordion-label + .panel {
+  max-height: 500px;
+  padding: 15px;
+  transition: max-height 0.3s ease-out;
+}
+
+.panel {
+  display: block;
+  overflow: hidden;
+  background-color: var(--soft-beige);
+  padding: 0 15px;
+  text-align: justify;
+  font-size: 1em;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-green);
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1em;
+}
