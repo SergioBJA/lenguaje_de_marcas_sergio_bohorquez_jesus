@@ -1,65 +1,22 @@
-:root {
-  --main-green: #7aad3e;
-  --soft-beige: #f5f5dc;
-  --white: #ffffff;
-  --text-dark: #353535;
-  --border-radius: 1rem;
-  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  --transition-speed: 0.3s;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body {
+  height: 100%; /* Asegura que html y body ocupen toda la altura */
+  margin: 0; /* Elimina márgenes predeterminados */
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--soft-beige);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-header {
-  background-color: var(--main-green);
-  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--white);
+  flex-direction: column; /* Coloca los elementos en una columna */
 }
 
-.logo img {
-  height: 60px;
-}
-
-.navegacion .menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.navegacion .menu li a {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-}
-
-.navegacion .menu li a:hover {
-  color: var(--soft-beige);
-}
 
 .servicios-section {
+  flex: 1; /* Permite que la sección principal ocupe el espacio restante */
   padding: 60px 20px;
   text-align: center;
 }
 
 .wrap-title-section h2 {
   font-size: 2.5em;
-  color: var(--main-green);
   margin-bottom: 50px;
   font-weight: bold;
 }
@@ -155,11 +112,3 @@ header {
   transition: max-height 0.3s ease-out;
 }
 
-/* Footer */
-footer {
-  background-color: var(--main-green);
-  padding: 20px;
-  text-align: center;
-  color: var(--white);
-  font-size: 1em;
-}

@@ -138,7 +138,6 @@ transform: translateY(0);
   
   .hero-section {
     height: 90vh; /* Aseguramos que ocupa el 90% de la altura de la pantalla */
-    background-color: #7caa3bae;
     background-blend-mode: multiply;
     display: flex;
     align-items: center;
@@ -181,3 +180,153 @@ transform: translateY(0);
     background-color: #a67b5b;
   }
     
+/*---footer---*/
+  
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+}
+.single-cta i {
+color: #ff5e14;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+ position: absolute;
+top: 0;
+left: 0;
+width: 100%; /* Hace que la imagen de fondo cubra todo el ancho */
+height: 330px;
+object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+.footer-logo {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding: 0; /* Espaciado superior e inferior */
+}
+
+.footer-logo img {
+width: 200px; /* Aumenta el tamaño del logo */
+max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+height: auto; /* Mantiene la proporción correcta */
+}
+
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+
+/*.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}*/
+
+.footer {
+  background-color: #f1e0c6;
+  padding: 20px; /* Aumenta el padding para evitar que toque los bordes */
+  text-align: center;
+  color: #6d4c41;
+  font-size: 14px;
+  margin-top: auto; /* Asegura que el footer se mantenga en la parte inferior */
+}
+
+.footer-container {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0px;
+flex-wrap: wrap;
+}
+
+.footer-logo img {
+height: 50px;
+}
+
+.footer-links {
+display: flex;
+gap: 15px;
+}
+
+.footer-links a {
+text-decoration: none;
+color: #6d4c41;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: #a67b5b;
+}
+
+.footer-social {
+display: flex;
+gap: 10px;
+}
+
+.footer-social a {
+display: inline-block; /* Para que el enlace mantenga su tamaño */
+width: 60px; /* Ajusta el tamaño según necesites */
+height: 60px;
+}
+
+.footer-social img {
+width: 100%; /* Hace que la imagen ocupe todo el espacio del contenedor */
+height: 100%;
+object-fit: contain; /* Evita que la imagen se recorte */
+border-radius: 10px; /* Opcional, si quieres bordes redondeados */
+background-color: rgba(255, 255, 255, 0); /* Fondo opcional si las imágenes son transparentes */
+padding: 5px; /* Espacio alrededor de la imagen */
+}
+
+.footer-copy {
+margin-top: 15px;
+font-size: 12px;
+}
