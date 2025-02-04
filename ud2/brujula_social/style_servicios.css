@@ -11,14 +11,16 @@ body {
 
 .servicios-section {
   flex: 1; /* Permite que la sección principal ocupe el espacio restante */
-  padding: 60px 20px;
   text-align: center;
 }
 
 .wrap-title-section h2 {
   font-size: 2.5em;
   margin-bottom: 50px;
+  margin-top: 150px;
   font-weight: bold;
+  color: #6d4c41;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wrap-servicios-section {
@@ -26,6 +28,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
   padding: 0 20px;
+  margin-bottom: 50px;
 }
 
 .wrap-servicios-section a {

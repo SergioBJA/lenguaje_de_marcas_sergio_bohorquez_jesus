@@ -5,6 +5,11 @@
   --white: #ffffff;
 }
 
+body{
+  display: block;
+  margin: 0px;
+}
+
 .valores {
   display: flex;
   flex-direction: column;

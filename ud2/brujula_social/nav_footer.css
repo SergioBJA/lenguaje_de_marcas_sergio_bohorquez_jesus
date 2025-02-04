@@ -234,9 +234,9 @@ padding: 0; /* Espaciado superior e inferior */
 }
 
 .footer-logo img {
-width: 200px; /* Aumenta el tamaño del logo */
+width: 120px; /* Aumenta el tamaño del logo */
 max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
-height: auto; /* Mantiene la proporción correcta */
+height: 120px;
 }
 
 .footer-text p {
@@ -278,16 +278,12 @@ border-radius: 50%;
 
 .footer-container {
 display: flex;
-justify-content: flex-start;
+justify-content: center;
 align-items: center;
 max-width: 1300px;
 margin: 0 auto;
 padding: 0px;
 flex-wrap: wrap;
-}
-
-.footer-logo img {
-height: 50px;
 }
 
 .footer-links {

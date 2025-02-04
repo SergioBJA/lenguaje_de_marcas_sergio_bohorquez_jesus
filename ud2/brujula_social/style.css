@@ -286,9 +286,11 @@
 }
 
 .info-box {
+    margin-top: 20px;
+    margin: 30px;
     background-color: #f0f0f0; /* Color de fondo */
     border-radius: 15px; /* Bordes redondeados */
-    padding: 20px;
+    padding: 30px;
     width: 300px; /* Ancho fijo */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center;
@@ -310,7 +312,46 @@
     color: #555;
 }
 
+/*---cartel_contacto---*/
 
+.valores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px; /* Espaciado para que no quede pegado al borde */
+  font-family: 'Open Sans', sans-serif;
+  color: #353535; /* Color de texto que ya usas en los enlaces */
+  line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+}
+
+.main-content-wrapper {
+  background-color: #f1e0c6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.main-content-box {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #353535;
+  line-height: 1.6;
+}
+
+.main-content-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6d4c41;
+}
+
+.main-content-box p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
 
   /** Form Section **/
   
@@ -337,7 +378,6 @@
     cursor: pointer;
   }
   
-  
 
 /* Formulario de Contacto */
 section.two-column-section.form {
@@ -349,7 +389,7 @@ section.two-column-section.form {
   max-width: 500px;  /* Tamaño más pequeño para el formulario */
   margin: 0 auto;
   padding: 1.5rem;  /* Menos padding */
-  background-color: #d4eeac;
+  background-color: #a9cf6e;
   border-radius: 5px;
   object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
