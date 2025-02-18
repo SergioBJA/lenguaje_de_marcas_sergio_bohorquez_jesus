@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media_aritmetica</title>
+</head>
+
+<body>
+    <h1>Contador de Pares e Impares</h1>
+    
+    <div>
+        <label for="numero">Introduce un número: </label>
+        <input type="text" id="numero">
+        <button onclick="agregarNumero()">Añadir número</button>
+    </div>
+
+    <div id="resultados">
+        <p><strong>Array de entrada:</strong> <span id="array"></span></p>
+        <p><strong>Hay <span id="pares">0</span> números pares y <span id="impares">0</span> números impares.</p>
+    </div>
+
+    <script>
+        let numeros = [];   
+
+        function agregarNumero() {
+            let num = document.getElementById('numero').value;
+            if (num === "0" || isNaN(num)) {
+                mostrarResultados();
+                return;
+            }
+
+            // Agregar el número al array
+            numeros.push(Number(num));
+            document.getElementById('numero').value = ""; // Limpiar el campo de texto
+            actualizarArray();
+        }
+
+        function actualizarArray() {
+            document.getElementById('array').textContent = JSON.stringify(numeros);
+        }
+
+        function mostrarResultados() {
+            let pares = 0;
+            let impares = 0;
+
+            // Contar los números pares e impares
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] % 2 === 0) {
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+
+            // Mostrar los resultados en la página
+            document.getElementById('pares').textContent = pares;
+            document.getElementById('impares').textContent = impares;
+        }
+    </script>
+</body>
+</html>
