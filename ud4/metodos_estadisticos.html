@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodos_estadisticos</title>
+</head>
+<body>
+
+    <script>
+"use strict";
+
+let gestor_vectores = {
+    vector_numeros: [],
+
+    setDatos: function (vector) {
+        this.vector_numeros = vector;
+    },
+
+    getSumatorio: function () {
+        let suma = 0;
+        for (let num of this.vector_numeros) {
+            suma += num;
+        }
+        return suma;
+    },
+
+    getMultiplicacion: function () {
+        if (this.vector_numeros.length === 0) return 0;
+        let multiplicacion = 1;
+        for (let num of this.vector_numeros) {
+            multiplicacion *= num;
+        }
+        return multiplicacion;
+    },
+
+    getMaximo: function () {
+        if (this.vector_numeros.length === 0) return null;
+        return Math.max(...this.vector_numeros);
+    },
+
+    getMinimo: function () {
+        if (this.vector_numeros.length === 0) return null;
+        return Math.min(...this.vector_numeros);
+    }
+}
+
+
+let vector_prueba = [5, 10, 8];
+gestor_vectores.setDatos(vector_prueba);
+
+let sumatorio = gestor_vectores.getSumatorio();
+let multiplicacion = gestor_vectores.getMultiplicacion();
+let maximo = gestor_vectores.getMaximo();
+let minimo = gestor_vectores.getMinimo();
+
+document.write("<h1>Gestor de Vectores</h1>");
+document.write("El sumatorio es: " + sumatorio + "<br>");
+document.write("La multiplicación es: " + multiplicacion + "<br>");
+document.write("El máximo es: " + maximo + "<br>");
+document.write("El mínimo es: " + minimo);
+
+    </script>
+
+</body>
+</html>
