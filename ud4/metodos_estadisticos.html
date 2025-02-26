@@ -8,57 +8,89 @@
 <body>
 
     <script>
-"use strict";
+"use strict"; // Modo estricto para evitar errores tontos
 
+// Objeto gestor_vectores que maneja operaciones con números
 let gestor_vectores = {
-    vector_numeros: [],
+    vector_numeros: [], // Almacena los números ingresados por el usuario
 
+    // Método para establecer los datos en el objeto
     setDatos: function (vector) {
         this.vector_numeros = vector;
     },
 
+    // Método que calcula la suma de todos los números del array
     getSumatorio: function () {
         let suma = 0;
         for (let num of this.vector_numeros) {
-            suma += num;
+            suma += num; // Suma cada número del array
         }
-        return suma;
+        return suma; // Devuelve el resultado final
     },
 
+    // Método que calcula la multiplicación de todos los números del array
     getMultiplicacion: function () {
-        if (this.vector_numeros.length === 0) return 0;
+        if (this.vector_numeros.length === 0) return 0; // Si el array está vacío, devuelve 0
         let multiplicacion = 1;
         for (let num of this.vector_numeros) {
-            multiplicacion *= num;
+            multiplicacion *= num; // Multiplica cada número del array
         }
-        return multiplicacion;
+        return multiplicacion; // Devuelve el resultado final
     },
 
+    // Método que devuelve el número más alto del array
     getMaximo: function () {
-        if (this.vector_numeros.length === 0) return null;
-        return Math.max(...this.vector_numeros);
+        if (this.vector_numeros.length === 0) return null; // Si el array está vacío, devuelve null
+        return Math.max(...this.vector_numeros); // Usa Math.max con spread (...) para sacar el mayor
     },
 
+    // Método que devuelve el número más bajo del array
     getMinimo: function () {
-        if (this.vector_numeros.length === 0) return null;
-        return Math.min(...this.vector_numeros);
+        if (this.vector_numeros.length === 0) return null; // Si el array está vacío, devuelve null
+        return Math.min(...this.vector_numeros); // Usa Math.min con spread (...) para sacar el menor
+    },
+
+    // Método que devuelve un array con los números pares
+    getPares: function () {
+        return this.vector_numeros.filter(num => num % 2 === 0); // Filtra los números que son divisibles entre 2
+    },
+
+    // Método que devuelve un array con los números impares
+    getImpares: function () {
+        return this.vector_numeros.filter(num => num % 2 !== 0); // Filtra los números que no son divisibles entre 2
     }
+};
+
+// Pedimos al usuario que ingrese números separados por comas
+let entrada = prompt("Introduce números separados por comas (ej: 5,10,8,3,2,7):");
+
+// Convertimos el string de entrada en un array de números
+let vector_prueba = entrada.split(",").map(Number); // split(",") separa los valores y map(Number) los convierte en números
+
+// Validamos que el usuario haya ingresado solo números
+if (vector_prueba.some(isNaN)) { // `some(isNaN)` verifica si hay valores no numéricos
+    document.write("<h1>Error: Ingresa solo números separados por comas.</h1>");
+} else {
+    // Si los datos son correctos, los guardamos en el objeto
+    gestor_vectores.setDatos(vector_prueba);
+
+    // Calculamos los resultados con los métodos del objeto
+    let sumatorio = gestor_vectores.getSumatorio();
+    let multiplicacion = gestor_vectores.getMultiplicacion();
+    let maximo = gestor_vectores.getMaximo();
+    let minimo = gestor_vectores.getMinimo();
+    let pares = gestor_vectores.getPares();
+    let impares = gestor_vectores.getImpares();
+
+    // Mostramos los resultados en la página
+    document.write("<h1>Gestor de Vectores</h1>");
+    document.write("El sumatorio es: " + sumatorio + "<br>");
+    document.write("La multiplicación es: " + multiplicacion + "<br>");
+    document.write("El máximo es: " + maximo + "<br>");
+    document.write("El mínimo es: " + minimo + "<br>");
+    document.write("Los números pares son: " + pares.join(", ") + "<br>");
+    document.write("Los números impares son: " + impares.join(", "));
 }
-
-
-let vector_prueba = [5, 10, 8];
-gestor_vectores.setDatos(vector_prueba);
-
-let sumatorio = gestor_vectores.getSumatorio();
-let multiplicacion = gestor_vectores.getMultiplicacion();
-let maximo = gestor_vectores.getMaximo();
-let minimo = gestor_vectores.getMinimo();
-
-document.write("<h1>Gestor de Vectores</h1>");
-document.write("El sumatorio es: " + sumatorio + "<br>");
-document.write("La multiplicación es: " + multiplicacion + "<br>");
-document.write("El máximo es: " + maximo + "<br>");
-document.write("El mínimo es: " + minimo);
 
     </script>
 
