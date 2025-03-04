@@ -1,15 +1,27 @@
-// Programa para calcular el área de un rectángulo
+/* Esperaremos hasta que el documento esté cargado y listo
+ * para ser procesado por nuestro programa*/
 
-// Pedir al usuario que ingrese la base y la altura del rectángulo
-let base = window.prompt("Ingresa la base del rectángulo:");
-let altura = window.prompt("Ingresa la altura del rectángulo:");
+let obj_documento = $(document)
 
-// Convertir los valores a números
-base = parseFloat(base);
-altura = parseFloat(altura);
+/* Cuando esté cargado ejecutaremos la función cuyo nombre aparezca aquí*/
+obj_documento.ready(inicio)
 
-// Calcular el área del rectángulo
-let area = base * altura;
+//* Error gravísimo*/
+//obj_documento.ready( inicio() )
 
-// Mostrar el resultado
-console.log("El área del rectángulo es: " + area + " unidades cuadradas");
+function inicio(){
+        let obj_izq=$("#botonizq")
+        obj_izq.click ( fn_click_izq )
+        let obj_der=$("#botonder")
+        obj_der.click ( fn_click_der )
+}
+
+function fn_click_izq(){
+        let obj_div=$("#texto")
+        obj_div.fadeOut()
+}
+
+function fn_click_der(){
+        let obj_div=$("#texto")
+        obj_div.fadeIn()
+}

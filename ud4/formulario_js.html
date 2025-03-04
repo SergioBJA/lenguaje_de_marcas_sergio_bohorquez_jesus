@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario JavaScript</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; text-align: center;">
+
+    <h2 style="color: #333;">📋 Formulario de Contacto</h2>
+
+    <!-- Contenedor del formulario -->
+    <div style="background: white; padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+
+        <form id="miFormulario">
+            <label for="nombre"><strong>Nombre:</strong></label><br>
+            <input type="text" id="nombre" required style="padding: 5px; width: 80%; margin: 5px 0;"><br><br>
+
+            <label for="email"><strong>Email:</strong></label><br>
+            <input type="email" id="email" required style="padding: 5px; width: 80%; margin: 5px 0;"><br><br>
+
+            <label for="telefono"><strong>Teléfono:</strong></label><br>
+            <input type="tel" id="telefono" pattern="[0-9]{9}" placeholder="Ej: 123456789" required style="padding: 5px; width: 80%; margin: 5px 0;"><br><br>
+
+            <button type="submit" style="background: #28a745; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Enviar</button>
+        </form>
+
+    </div>
+
+    <!-- Espacio para mostrar los resultados -->
+    <h3 style="color: #333; margin-top: 20px;">📌 Datos ingresados:</h3>
+    <p id="resultado" style="background: white; padding: 10px; display: inline-block; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);"></p>
+
+    <script>
+        let formulario = document.getElementById("miFormulario");
+        let resultado = document.getElementById("resultado");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            let nombre = document.getElementById("nombre").value;
+            let email = document.getElementById("email").value;
+            let telefono = document.getElementById("telefono").value;
+
+            if (nombre === "" || email === "" || telefono === "") {
+                resultado.innerHTML = "<span style='color:red; font-weight: bold;'>❌ Todos los campos son obligatorios.</span>";
+                return;
+            }
+
+            let regexTelefono = /^[0-9]{9}$/;
+            if (!regexTelefono.test(telefono)) {
+                resultado.innerHTML = "<span style='color:red; font-weight: bold;'>❌ El teléfono debe tener 9 dígitos numéricos.</span>";
+                return;
+            }
+
+            resultado.innerHTML = `<strong>✅ Nombre:</strong> ${nombre} <br> 
+                                   <strong>📧 Email:</strong> ${email} <br> 
+                                   <strong>📞 Teléfono:</strong> ${telefono}`;
+        });
+    </script>
+
+</body>
+</html>
