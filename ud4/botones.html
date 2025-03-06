@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+</head>
+
+<body>
+    <button onclick="alternarParrafos('even', false)">Ocultar pares</button>
+    <button onclick="alternarParrafos('odd', false)">Ocultar impares</button>
+    <button onclick="alternarParrafos('even', true)">Mostrar pares</button>
+    <button onclick="alternarParrafos('odd', true)">Mostrar impares</button>
+
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>Párrafo 4</p>
+    <p>Párrafo 5</p>
+    <p>Párrafo 6</p>
+    <p>Párrafo 7</p>
+    <p>Párrafo 8</p>
+
+    <script>
+        function alternarParrafos(tipo, mostrar) {
+            let parrafos = document.querySelectorAll("p");
+            parrafos.forEach((p, indice) => {
+                if ((tipo === 'even' && (indice + 1) % 2 === 0) || (tipo === 'odd' && (indice + 1) % 2 !== 0)) {
+                    p.classList.toggle('hidden', !mostrar);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

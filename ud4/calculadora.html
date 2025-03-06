@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Mínima</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function calcular(operador) {
+            
+            // Obtener valores
+            var n1 = parseFloat(document.getElementById('num1').value);
+            var n2 = parseFloat(document.getElementById('num2').value);
+            
+            // Validar números
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById('resultado').innerHTML = "¡Error! Usa números";
+                return;
+            }
+            
+            // Hacer cálculo
+            var res;
+            if (operador === '+') res = n1 + n2;
+            if (operador === '-') res = n1 - n2;
+            if (operador === '*') res = n1 * n2;
+            if (operador === '/') {
+                if (n2 === 0) {
+                    document.getElementById('resultado').innerHTML = "No dividas por 0";
+                    return;
+                }
+                res = n1 / n2;
+            }
+            
+            // Mostrar resultado
+            document.getElementById('resultado').innerHTML = "Resultado: " + res;
+        }
+    </script>
+</body>
+</html>
