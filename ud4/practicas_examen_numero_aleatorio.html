@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numero Aleatorio</title>
+</head>
+<body>
+    <h1 id="numero">Presiona el boton</h1>
+    <button onclick="generarNumero()">Generar</button>
+    <script>
+        function generarNumero() {
+            let num = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("numero").innerText = "Numero: " + num;
+        }
+    </script>
+</body>
+</html>
