@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Oposiciones 2018</title>
+
+</head>
+<body>
+    <p id="contenido_1">[1] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a id="enlace_1" href="#" onclick="muestraOculta(1)">Ocultar contenido</a>
+    <br><br>
+    
+    <p id="contenido_2">[2] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a id="enlace_2" href="#" onclick="muestraOculta(2)">Ocultar contenido</a>
+    <br><br>
+    
+    <p id="contenido_3">[3] Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a id="enlace_3" href="#" onclick="muestraOculta(3)">Ocultar contenido</a>
+
+    <script type="text/javascript">
+        function muestraOculta(id) {
+            var parrafo = document.getElementById("contenido_" + id);
+            var enlace = document.getElementById("enlace_" + id);
+            
+            if (parrafo.style.display === "none") {
+                parrafo.style.display = "block";
+                enlace.textContent = "Ocultar contenido";
+            } else {
+                parrafo.style.display = "none";
+                enlace.textContent = "Mostrar contenido";
+            }
+        }
+    </script>
+</body>
+</html>
