@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatorio de 100 Números</title>
+</head>
+<body>
+    <h1>Sumatorio de 100 Números Aleatorios</h1>
+    <button onclick="calcularSuma()">Generar y Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularSuma() {
+            let numeros = [];
+            let suma = 0;
+
+            // Generar 100 números aleatorios y calcular la suma
+            for (let i = 0; i < 100; i++) {
+                let num = Math.floor(Math.random() * 100) + 1; // Números entre 1 y 100
+                numeros.push(num);
+                suma += num;
+            }
+
+            document.getElementById("resultado").innerText = "Suma total: " + suma;
+        }
+    </script>
+</body>
+</html>
