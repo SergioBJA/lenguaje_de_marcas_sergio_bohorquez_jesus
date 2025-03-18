@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery.js"></script>
     <title>Ejercicio2</title>
+    <style>
+        .par { background-color: lightgreen; padding: 10px; margin-bottom: 10px; }
+        .impar { background-color: lightblue; padding: 10px; margin-bottom: 10px; }
+    </style>
 </head>
 <body>
-    <h1> Tablas de Multiplicar</h1>
-
-    <input type="text" id="num">
-
-    <button onclick="tablas()" id="calcular"> calcular </button>
-
-    <div id="resultado"></div>
-
     <script>
-        function tablas(){
+        let input = prompt("Ingrese un número hasta donde lleguen las tablas de multiplicar");
+        let num = parseInt(input);
 
-            var n1 = parseFloat(document.getElementById('num').value);
-
-            var calcular;
-            if(num === 0) {
-                document.getElementById('resultado').innerHTML = "1 * 1 = 1";
-                return;
+        if (!isNaN(num) && num > 0) {
+            for (let i = 1; i <= num; i++) {
+                let clase = (i % 2 === 0) ? "par" : "impar";
+                document.write(`<div class="${clase}">`);
+                document.write(`<strong>Tabla de multiplicar del ${i}</strong><br>`);
+                for (let j = 1; j <= 10; j++) {
+                    document.write(`${i} x ${j} = ${i * j}<br>`);
+                }
+                document.write("</div>");
             }
+        } else {
+            document.write("<p style='color:red;'>Por favor, ingrese un número válido.</p>");
         }
-
     </script>
 </body>
 </html>
