@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Juegos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Tus Juegos Favoritos 🎯🎮⌨🎳</h1>
+
+    <div class="ui-grid-d">
+        <div class="ui-block-a">
+            <input type="checkbox"
+                name="juego"
+                id="rainbow">
+            <label for="rainbow">Rainbow Six Siege</label>
+        </div>
+        <div class="ui-block-b">
+            <input type="checkbox"
+                name="juego"
+                id="apex">
+            <label for="apex">Apex Legends</label>
+        </div>
+        <div class="ui-block-c">
+            <input type="checkbox"
+                name="juego"
+                id="overwatch">
+            <label for="overwatch">Overwatch</label>
+        </div>
+        <div class="ui-block-d">
+            <input type="checkbox"
+                name="juego"
+                id="gtav">
+            <label for="gtav">GTA V</label>
+        </div>
+        <div class="ui-block-e">
+            <input type="checkbox"
+                name="juego"
+                id="stardew">
+            <label for="stardew">Stardew Valley</label>
+        </div>
+    </div>
+    <input type="text" id="informe" readonly>
+
+<script>
+    $(document).ready(main);
+
+    function contar(){
+        let contador = 0;
+        let ids = ["#rainbow", "#apex", "#overwatch", "#gtav", "#stardew"];
+
+        for (let pos in ids){
+            let juego = $(ids[pos]);
+            if (juego.prop("checked")) {
+                contador = contador + 1;
+            }
+        }
+        let mensaje = "Juegos seleccionados: " + contador;
+        $("#informe").val(mensaje);
+    }
+
+    function main(){
+        $("#rainbow").click(contar);
+        $("#apex").click(contar);
+        $("#overwatch").click(contar);
+        $("#gtav").click(contar);
+        $("#stardew").click(contar);
+    }
+</script>
+</body>
+</html>
