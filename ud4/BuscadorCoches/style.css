@@ -1,49 +1,51 @@
-
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
 }
+
 h1 {
     color: #2c3e50;
     text-align: center;
+    margin-bottom: 30px;
 }
+
 form {
-    background-color: white;
-    padding: 20px;
+    background-color: #f9f9f9;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.form-group {
+
+form div {
     margin-bottom: 20px;
 }
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #2c3e50;
 }
+
 select, input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 16px;
 }
-.checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-.checkbox-item {
-    display: flex;
-    align-items: center;
-}
-.checkbox-item input {
-    margin-right: 10px;
-}
+
 button {
     background-color: #3498db;
     color: white;
@@ -52,20 +54,73 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    display: block;
-    margin: 20px auto 0;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
+
 button:hover {
     background-color: #2980b9;
 }
-.submit-result {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 4px;
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+#resultContainer {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
     display: none;
 }
-.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+
+#resultContainer h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.prompt-text {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-family: monospace;
+}
+
+.note {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

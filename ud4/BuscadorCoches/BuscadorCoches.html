@@ -9,70 +9,111 @@
 <body>
     <h1>Buscador de Coches</h1>
     
-    <form>
-        <label>Tipo de coche:</label>
-        <select required>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="sedan">Sedán</option>
-            <option value="suv">SUV</option>
-            <option value="hatchback">Hatchback</option>
-            <option value="coupe">Coupé</option>
-            <option value="pickup">Pickup</option>
-            <option value="familiar">Familiar</option>
-            <option value="furgoneta">Furgoneta</option>
-            <option value="descapotable">Descapotable</option>
-        </select>
-
-        <label>Tipo de combustible:</label>
-        <select required>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="gasolina">Gasolina</option>
-            <option value="diesel">Diésel</option>
-            <option value="hibrido">Híbrido</option>
-            <option value="electrico">Eléctrico</option>
-        </select>
-
-        <label>Transmisión:</label>
-        <select>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="manual">Manual</option>
-            <option value="automatica">Automática</option>
-            <option value="semiautomatica">Semiautomática</option>
-        </select>
-
-        <label>Precio máximo (€):</label>
-        <input type="number" min="0" step="500" placeholder="Introduce el precio máximo">
-
-        <label>Equipamiento deseado:</label>
+    <form id="carSearchForm">
+        <!-- Selección del tipo de coche -->
         <div>
-            <input type="checkbox" value="gps"> GPS/Navegador
-            <input type="checkbox" value="camara"> Cámara de aparcamiento
-            <input type="checkbox" value="sensors"> Sensores de aparcamiento
-            <input type="checkbox" value="bluetooth"> Bluetooth
+            <label for="tipo">Tipo de coche:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="sedan">Sedán</option>
+                <option value="suv">SUV</option>
+                <option value="hatchback">Hatchback</option>
+                <option value="coupe">Coupé</option>
+                <option value="pickup">Pickup</option>
+                <option value="familiar">Familiar</option>
+                <option value="furgoneta">Furgoneta</option>
+                <option value="descapotable">Descapotable</option>
+            </select>
         </div>
-
-        <label>Número de plazas:</label>
-        <select>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="7">7 o más</option>
-        </select>
-
-        <label>Potencia mínima (CV):</label>
-        <select>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="100">Menos de 100 CV</option>
-            <option value="150">100-150 CV</option>
-            <option value="200">150-200 CV</option>
-            <option value="250">200-250 CV</option>
-            <option value="300">Más de 250 CV</option>
-        </select>
-
+        
+        <!-- Selección del tipo de combustible -->
+        <div>
+            <label for="combustible">Tipo de combustible:</label>
+            <select id="combustible" name="combustible" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="diesel">Diésel</option>
+                <option value="hibrido">Híbrido</option>
+                <option value="electrico">Eléctrico</option>
+            </select>
+        </div>
+        
+        <!-- Selección de la transmisión -->
+        <div>
+            <label for="transmision">Transmisión:</label>
+            <select id="transmision" name="transmision">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="manual">Manual</option>
+                <option value="automatica">Automática</option>
+                <option value="semiautomatica">Semiautomática</option>
+            </select>
+        </div>
+        
+        <!-- Campo para ingresar el precio máximo -->
+        <div>
+            <label for="precio">Precio máximo (€):</label>
+            <input type="number" id="precio" name="precio" min="0" step="1000" placeholder="Ej: 30000">
+        </div>
+        
+        <!-- Selección de equipamiento adicional -->
+        <div>
+            <label>Equipamiento deseado:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="gps" name="extras" value="gps">
+                    <label for="gps">GPS/Navegador</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="camara" name="extras" value="camara">
+                    <label for="camara">Cámara de aparcamiento</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="sensors" name="extras" value="sensors">
+                    <label for="sensors">Sensores de aparcamiento</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="bluetooth" name="extras" value="bluetooth">
+                    <label for="bluetooth">Bluetooth</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="asistente" name="extras" value="asistente">
+                    <label for="asistente">Asistente de conducción</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Selección del número de plazas -->
+        <div>
+            <label for="plazas">Número de plazas:</label>
+            <select id="plazas" name="plazas">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="7">7 o más</option>
+            </select>
+        </div>
+        
+        <!-- Selección de la potencia del coche -->
+        <div>
+            <label for="potencia">Potencia mínima (CV):</label>
+            <select id="potencia" name="potencia">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="100">Menos de 100 CV</option>
+                <option value="150">100-150 CV</option>
+                <option value="200">150-200 CV</option>
+                <option value="250">200-250 CV</option>
+                <option value="300">Más de 250 CV</option>
+            </select>
+        </div>
+        
+        <!-- Botón para enviar la búsqueda -->
         <button type="submit">Buscar Coches Recomendados</button>
     </form>
     
-    <div></div>
+    <!-- Div para mostrar los resultados -->
+    <div id="resultContainer"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
