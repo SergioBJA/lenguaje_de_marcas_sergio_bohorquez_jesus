@@ -96,7 +96,7 @@ document.getElementById('carSearchForm').addEventListener('submit', function(eve
     
     if (tipo) promptText += `• Tipo: 🚗 ${getSelectedText('tipo')}\n`;
     if (combustible) promptText += `• Combustible: ⛽ ${getSelectedText('combustible')}\n`;
-    if (transmision) promptText += `• Transmisión: 🕹 ${getSelectedText('transmision')}\n`;
+    if (transmision) promptText += `• Transmisión:  ${getSelectedText('transmision')}\n`;
     if (precio) promptText += `• Precio máximo indicado: 💲 ${parseInt(precio).toLocaleString('es-ES')}€\n`;
     if (plazas) promptText += `• Número de plazas: 👪 ${plazas}\n`;
     if (potencia) promptText += `• Potencia mínima: 🐎 ${getSelectedText('potencia')}\n`;
