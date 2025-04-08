@@ -1,0 +1,125 @@
+/* Reset básico para eliminar márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del fondo de la página */
+body {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Contenedor principal - centro de la página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center;
+    color: #3498db; /* Color azul para el título */
+    margin-bottom: 30px;
+}
+
+/* Contenedor del formulario - organiza elementos en columna */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada grupo de campo del formulario */
+.campo {
+    margin-bottom: 10px;
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Estilo para campos numéricos y listas desplegables */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Organización de los checkbox junto a sus etiquetas */
+.checkbox-grupo {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+/* Espacio entre el checkbox y su etiqueta */
+.checkbox-grupo input {
+    margin-right: 10px;
+}
+
+/* Estilo del botón de calcular */
+button {
+    background-color: #3498db; /* Color azul para el botón */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Estilo para el contenedor del resultado */
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f7ff; /* Fondo azul claro */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de mensajes de error */
+.error {
+    color: #e74c3c; /* Color rojo para el texto de error */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fadbd8; /* Fondo rosa claro para errores */
+    border-radius: 5px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilo específico para el precio final */
+.precio-final {
+    color: #2980b9; /* Color azul para destacar el precio */
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo para la lista de asignaturas seleccionadas */
+.asignaturas {
+    text-align: center;
+    margin: 10px 0;
+}
