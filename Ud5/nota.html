@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Nota con Penalización</title>
+</head>
+<body>
+<h2> Calculadora de Nota - Test de 27 preguntas</h2>
+
+<label for="aciertos"> Aciertos (0-27):</label>
+<input type="number" id="aciertos" min="0" max="27"><br><br>
+
+<label for="penalizacion"> ¿Cuánto resta cada fallo? (Ej: 0.25):</label>
+<input type="number" id="penalizacion" step="0.01" min="0"><br><br>
+
+<button onclick="calcularNota()">Calcular Nota</button>
+
+<p id="resultado"></p>
+
+<script>
+    function calcularNota() {
+    const totalPreguntas = 27;
+    const notaMaxima = 10;
+
+    const aciertos = parseInt(document.getElementById("aciertos").value);
+    const penalizacion = parseFloat(document.getElementById("penalizacion").value);
+    const errores = totalPreguntas - aciertos;
+
+    if (isNaN(aciertos) || isNaN(penalizacion) || aciertos < 0 || aciertos > totalPreguntas || penalizacion < 0) {
+        document.getElementById("resultado").innerText = " Introduce valores válidos.";
+        return;
+    }
+
+      const nota = ((aciertos - errores * penalizacion) / totalPreguntas) * notaMaxima;
+      const notaFinal = Math.max(nota, 0).toFixed(2); // Nunca menos de 0
+
+    document.getElementById("resultado").innerText =
+        ` Aciertos: ${aciertos}, Fallos: ${errores}, Penalización: ${penalizacion} por fallo.\n🎯 Tu nota es: ${notaFinal}`;
+    }
+</script>
+</body>
+</html>
